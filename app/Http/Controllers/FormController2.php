@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class FormController extends Controller
 {
+    //
     public function mostrarForm(){
     	return view('contactos');
     }
@@ -21,8 +22,11 @@ public function processarForm(Request $Request)
 		'automovel'=>$automovel
 	]);
 	}
-
-public function index(){
+	public function index(){
 	return view('entrada');
-	}	
-}
+}	
+
+
+
+
+

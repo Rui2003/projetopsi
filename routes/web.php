@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('contactos', '
-FormController@mostrarForm')
-	->name('mostrar.form');
+Route::get('contactos', 'App\Http\Controllers\FormController@mostrarForm')->name('mostrar.form');
+
+Route::post('contactos', 'App\Http\Controllers\FormController@processarForm')->name('processar.form');
+
+Route::get('/', 'App\Http\Controllers\FormController@index')->name('index');
+Route::get('/entrada', 'App\Http\Controllers\FormController@index')->name('entrada');
